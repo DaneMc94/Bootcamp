@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Control Statements</h1>
+<p>If..else</p>
+
+<p>Are the  numbers increasing, decreasing, or neither?</p>
+
+<script>
+// allowing user to enter the 3 numbers
+let a = prompt("Input first number");
+let b = prompt("Input second number");
+let c = prompt("Input third number");
+
+// check if numbers are increasing
+if (a < b && b < c) {
+  document.write("Increasing order");
+}
+// check if numbers are all different
+else if (a > b && b > c) {
+  document.write("Decreasing order");
+}
+// statement if neither condition is met
+else {
+  document.write("Neither increasing or decreasing order");
+}
+</script>
+
+</body>
+</html>

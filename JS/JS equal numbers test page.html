@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Control Statements</h1>
+<p>If..else</p>
+
+<p>Are all numbers the same, different, or neither?</p>
+
+<script>
+// allowing user to enter the 3 numbers
+let a = prompt("Enter the first number");
+let b = prompt("Enter the second number");
+let c = prompt("Enter the third number");
+
+// check if numbers are all equal
+if (a == b && a == c) {
+  document.write("All numbers are equal");
+}
+// check if numbers are all different
+else if (a != b && b != c && a != c) {
+  document.write("All numbers are different");
+}
+// statement if neither condition is met
+else {
+  document.write("Neither all are equal or different");
+}
+</script>
+
+</body>
+</html>

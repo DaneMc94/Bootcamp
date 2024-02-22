@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Maximum and minimum values of an array</h1>
+
+Test data: 25, 14, 56, 15, 36, 56, 77, 18, 29, 49
+
+<script>
+// Define an array of numbers
+const numbers = [10, 2, 3, 4, 7];
+
+// Function to find the maximum value in an array
+function findMax(arr) {
+  if (arr.length === 0) {
+    return "Array is empty. Cannot find maximum value.";
+  }
+
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return max;
+}
+
+// Find the maximum value of the sample array
+const maxResult = findMax(numbers);
+
+// Display the result
+document.write("<p>The content of the array is: " + numbers + ".</p>");
+document.write("<p>The max value in the array is: " + maxResult + ".</p>");
+</script>
+
+</body>
+</html>

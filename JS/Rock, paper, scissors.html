@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> Rock, paper, scissors </h1>
+
+<p> Let's play! 
+
+Make your choice...</p>
+
+<button type="button" onclick="playGame('rock')">Rock</button>
+<button type="button" onclick="playGame('paper')">Paper</button>
+<button type="button" onclick="playGame('scissors')">Scissors</button>
+
+<p id="result"></p>
+
+  <script>
+  //creating a function to randomise an outcome between rock, paper and scissors
+        function playGame(userChoice) {
+var choices = ['rock', 'paper', 'scissors'];
+var computerChoice = choices[Math.floor(Math.random() * 3)];
+
+var result = '';
+
+if (userChoice === computerChoice) {
+                result = "It's a draw! Play again.";
+
+} else if (
+                (userChoice === 'rock' && computerChoice === 'scissors')
+ ) {
+                result = "You chose rock. The computer chose... scissors! You win! Rock smashes scissors.";
+            }
+			else if (
+                (userChoice === 'rock' && computerChoice === 'paper')
+ ) {
+                result = "You chose rock. The computer chose... paper! You lose! Paper covers rock.";
+            }
+			else if (
+                (userChoice === 'paper' && computerChoice === 'rock')
+ ) {
+                result = "You chose paper. The computer chose... rock! You win! Paper covers rock.";
+            }
+			else if (
+                (userChoice === 'paper' && computerChoice === 'scissors')
+ ) {
+                result = "You chose paper. The computer chose... scissors! You lose! Scissors cut paper.";
+            }
+			else if (
+                (userChoice === 'scissors' && computerChoice === 'paper')
+ ) {
+                result = "You chose scissors. The computer chose... paper! You win! Scissors cut paper.";
+            }
+			else {
+                result = "You chose scissors. The computer chose... rock! You lose! Rock smashes scissors.";
+				
+        }
+		
+		// Display the result
+        document.getElementById('result').innerText = result;
+    }
+    </script>
+
+</body>
+</html>

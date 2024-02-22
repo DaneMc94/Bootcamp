@@ -1,0 +1,86 @@
+Write 2 JavaScript functions to: 
+
+show the array content. 
+find the max value in the array.
+Sample Array : [10, 2, 3, 4, 7]
+
+Expected Output :
+
+The content of the array is: [10, 2, 3, 4, 7]
+
+The max value in the array is: 10
+
+<script>
+// Define an array of numbers
+const numbers = [10, 2, 3, 4, 7];
+
+// Function to find the maximum value in an array
+function findMax(arr) {
+  if (arr.length === 0) {
+    return "Array is empty. Cannot find maximum value.";
+  }
+
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return max;
+}
+
+// Find the maximum value of the sample array
+const maxResult = findMax(numbers);
+
+// Display the result
+document.write("<p>The content of the array is: " + numbers + ".</p>");
+document.write("<p>The max value in the array is: " + maxResult + ".</p>");
+</script>
+
+Write a JavaScript function to calculate the factorial of a number (a non-negative integer n ). The function accepts the number as an argument.
+
+<script>
+function factorial(n) {
+    // Check if n is negative
+    if (n < 0) {
+        return "Factorial is not defined for negative numbers";
+    }
+    
+    // If n is 0 or 1, factorial is 1
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    
+    // Result should be 1
+    let result = 1;
+    
+    // Loop from 2 to n and multiply each number to result
+    for (let i = 2; i <= n; i++) {
+        result *= i;
+    }
+    
+    return result;
+}
+</script>
+
+Write a JavaScript function that takes a number as a parameter and check the number is prime or not. 
+
+function isPrime(number) {
+    // Check if number is less than 2
+    if (number < 2) {
+        return false;
+    }
+    
+    // Loop from 2 to the square root of the number
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        // If number is divisible by any number in this range, it's not prime
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    
+    // If no divisors are found, the number is prime
+    return true;
+}

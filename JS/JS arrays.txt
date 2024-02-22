@@ -1,0 +1,135 @@
+JS arrays
+
+Write a JavaScript program to sum values of an array.
+
+Test Data:
+
+Sample Array:
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+Expected Output:
+
+The sum is 55.
+
+<script>
+// Define an array of numbers
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Function to calculate the sum of array values
+function calculateSum(arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  return sum;
+}
+
+// Calculate the sum of the array 'numbers'
+const result = calculateSum(numbers);
+
+// Display the result
+document.write("<p>Sum of array values: " + result + "</p>");
+</script>
+
+
+Write a JavaScript program to calculate the average value of an array elements.
+
+Test Data:
+
+Sample Array:
+
+[20, 30, 25, 35, -16, 60, -100]
+
+Expected Output:
+
+Average value of the array elements is : 7.7.
+
+// Define an array of numbers
+const numbers = [20, 30, 25, 35, -16, 60, -100];
+
+// Function to calculate the average of array elements
+function calculateAverage(arr) {
+  if (arr.length === 0) {
+    return "Array is empty. Cannot calculate average.";
+  }
+
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  const average = sum / arr.length;
+  // Round the average to 1 decimal point
+  return average.toFixed(1);
+}
+
+// Calculate the average of the sample array
+const result = calculateAverage(numbers);
+
+// Display the result
+document.write("<p>Average value of the array elements is " + result + ".</p>");
+
+Write a JavaScript program to find the maximum and minimum value of an array.
+
+Test Data:
+
+Sample Array:
+
+[25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
+
+Expected Output:
+
+Original Array: [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
+
+Maximum value for the above array = 77
+
+Minimum value for the above array = 14
+
+// Define an array of numbers
+const numbers = [20, 30, 25, 35, -16, 60, -100];
+
+// Function to find the maximum value in an array
+function findMax(arr) {
+  if (arr.length === 0) {
+    return "Array is empty. Cannot find maximum value.";
+  }
+
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return max;
+}
+
+// Function to find the minimum value in an array
+function findMin(arr) {
+  if (arr.length === 0) {
+    return "Array is empty. Cannot find minimum value.";
+  }
+
+  let min = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+
+  return min;
+}
+
+// Find the maximum and minimum values of the sample array
+const maxResult = findMax(numbers);
+const minResult = findMin(numbers);
+
+// Display the results
+document.write("<p>Maximum value for the above array: " + maxResult + "</p>");
+document.write("<p>Minimum value for the above array: " + minResult + "</p>");
